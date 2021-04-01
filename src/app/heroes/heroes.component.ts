@@ -36,10 +36,11 @@ export class HeroesComponent implements OnInit {
       });
   }
 
-  public remove(id: number) {
-    this.heroService.deleteHero(id);
+  remove(hero: Hero): void {
+    this.heroes = this.heroes.filter(h => h !== hero);
+    this.heroService.deleteHero(hero.id).subscribe();
   }
   public goDashBoardPage(){
-    this.location.back();
+    this.router.navigate(["/dashboard"]);
   }
 }

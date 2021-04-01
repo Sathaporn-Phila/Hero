@@ -1,6 +1,8 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from '@nativescript/angular';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from '@src/app/app-routing.module';
 import { AppComponent } from '@src/app/app.component';
 import { DashboardComponent } from '@src/app/dashboard/dashboard.component';
@@ -27,6 +29,14 @@ import { NativeScriptFormsModule, NativeScriptHttpClientModule } from '@nativesc
     NativeScriptFormsModule,
     NativeScriptHttpClientModule,
     AppRoutingModule,
+    HttpClientModule,
+
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent],
