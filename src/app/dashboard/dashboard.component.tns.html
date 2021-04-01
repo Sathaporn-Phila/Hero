@@ -1,0 +1,9 @@
+<ActionBar title="Tour of Heroes"></ActionBar>
+<StackLayout>
+    <Label text="Dashboard" class="h1"></Label>
+    <Label text="Top Heroes" class="h2"></Label>
+    <FlexboxLayout flexWrap="wrap" flexDirection="row">
+        <button *ngFor="let hero of heroes" text="{{ hero.name }}" (tap)="edit(hero.id)" flexGrow="1" class="hero-flexgrid-item"></button>
+    </FlexboxLayout>
+    <button text="Heroes"  (tap)="goHeroesPage()"></button>
+</StackLayout>
