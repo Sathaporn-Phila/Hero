@@ -2,7 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from '@nativescript/angular';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from '@src/app/in-memory-data.service';
 import { AppRoutingModule } from '@src/app/app-routing.module';
 import { AppComponent } from '@src/app/app.component';
 import { DashboardComponent } from '@src/app/dashboard/dashboard.component';
@@ -14,6 +14,7 @@ import { MessageComponent } from '@src/app/message/message.component';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding and/or HTTP wrapper
 import { NativeScriptFormsModule, NativeScriptHttpClientModule } from '@nativescript/angular';
+import { TestMockComponent } from '@src/app/test-mock/test-mock.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NativeScriptFormsModule, NativeScriptHttpClientModule } from '@nativesc
     HeroesComponent,
     HeroSearchComponent,
     MessageComponent,
+    TestMockComponent,
   ],
   imports: [
     NativeScriptModule,

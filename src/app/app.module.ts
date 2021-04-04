@@ -3,15 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from '@src/app/in-memory-data.service';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from '@src/app/app-routing.module';
 
-import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { AppComponent } from '@src/app/app.component';
+import { DashboardComponent } from '@src/app/dashboard/dashboard.component';
+import { HeroDetailComponent } from '@src/app/hero-detail/hero-detail.component';
+import { HeroesComponent } from '@src/app/heroes/heroes.component';
+import { HeroSearchComponent } from '@src/app/hero-search/hero-search.component';
+import { TestMockComponent } from '@src/app/test-mock/test-mock.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     DashboardComponent,
     HeroesComponent,
     HeroDetailComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    TestMockComponent
   ],
   bootstrap: [ AppComponent ]
 })
